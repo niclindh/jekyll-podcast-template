@@ -1,0 +1,15 @@
+#supermax {
+	background: url('/img/hero.jpg') no-repeat;
+	background-size: cover;
+}
+
+#supermax {
+  width: 100%;
+  height: 300px;
+}
+@media only screen and (max-width: 768px) {
+	#supermax {
+	  width: 100%;
+	  height: 250px;
+	}
+}

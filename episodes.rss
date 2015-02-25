@@ -1,0 +1,44 @@
+---
+
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
+<channel>
+	<title>{{ site.title }}</title>
+	<link>{{ site.url }}</link>
+	<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+	<language>en-US</language>
+	<generator>Jekyll (http://jekyllrb.com)</generator>
+	<itunes:author>{{ site.podcast.owner.name }}</itunes:author>
+	<itunes:subtitle>{{ site.description }}</itunes:subtitle>
+	<itunes:summary>{{ site.description }}</itunes:summary>
+	<description>{{ site.description }}</description>
+	<itunes:explicit>{{ site.podcast.explicit }}</itunes:explicit>			
+	<itunes:keywords>{{ site.podcast.keywords }}</itunes:keywords>
+	<itunes:owner>
+		<itunes:name>{{ site.podcast.owner.name }}</itunes:name>
+		<itunes:email>{{ site.email }}</itunes:email>
+	</itunes:owner>
+	{% for category_hash in site.podcast.categories %}{% for hash in category_hash %}
+	<itunes:category text="{{ hash[1] }}"/> 
+	{% endfor %}{% endfor %}
+	<itunes:image href="{{ site.url }}{{ site.podcast.image }}"/>
+	
+{% for post in site.posts %}
+	<item>
+		<title>{{ post.title | xml_escape }}</title>
+		<dc:creator>{{ site.podcast.owner.name }}</dc:creator>
+		<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+		<link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+		<guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+		<description>{{ post.excerpt }}</description>
+		<content:encoded>{{ post.content | xml_escape }}</content:encoded>
+		<itunes:author>{{ site.podcast.owner.name }}</itunes:author>
+		<itunes:summary>{{ post.excerpt }}</itunes:summary>
+		<itunes:explicit>{{ post.explicit }}</itunes:explicit>
+		<itunes:duration>{{ post.duration }}</itunes:duration>
+		<itunes:image href="{{ site.url }}{{ site.podcast.image }}"/><enclosure url="{{ site.url }}/podcasts/{{ post.media }}" length="{{ post.length }}" type="audio/mpeg" />
+	</item>
+	{% endfor %}
+</channel>
+</rss>

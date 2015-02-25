@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+      	<h1 style="margin-bottom: 0;">{{ page.title }}</h1>
+      	<p>{{ page.date | date: "%-d %B %Y" }}</p>
+        <audio controls>
+			  <source src="/podcasts/{{ page.media }}" type="audio/mpeg">
+			Sadness. Your browser does not support the audio element.
+			</audio>
+			<div style="padding-top: 20px;"><a href="/podcasts/{{ page.media }}">Download MP3</a> | <a href="/episodes.rss">Subscribe to the podcast</a> | <a href="{{ site.itunes_url }}">Subscribe on iTunes</a>
+			</div>
+	<div style="padding-top: 20px;">
+        {{ content }}
+    </div>
+      </div>
+    </div>
+
+{% include footer.html %}
+
+	<script>
+		$('audio').mediaelementplayer();
+	</script>
+  
+  
+</body>
+</html>

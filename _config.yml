@@ -1,0 +1,28 @@
+exclude: ['README.md']
+
+# Used to generate the site
+title: "Generic Podcast"
+title_short: "Generic"
+email: "your-email@example.com"
+description: "Brief description of your podcast"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://example.com" # the base hostname & protocol for your site
+itunes_url: "https://itunes.apple.com/us/podcast/xxx"
+twitter_username: yourtwitter
+twitter_podcastname: yourpodcasttwitter
+
+# Used to generate the iTunes-compatible RSS feed
+podcast:
+  owner:
+    name: Your Name
+    email: your-podcast-email@example.com
+  explicit: "no" # Change to yes if you're a potty mouth
+  image: /img/generic-2000.png # iTunes requires 2,000 pixel art
+  keywords: "news"
+  categories:
+    - category: "Technology"
+
+# Build settings
+markdown: redcarpet
+redcarpet:
+    extensions: [smart]

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">{{ site.description }}</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts limit:10 %}
+      <li>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h3 class="rss-subscribe"><a href="{{ "/episodes.rss" | prepend: site.baseurl }}"Subscribe to >Subscribe to {{ site.title_short }} in your favorite podcast client</a></h3>
+  {% if site.itunes_url %}
+  <h3 class="rss-subscribe"><a href="{{ site.itunes_url }}">Subscribe on iTunes</a></h3>
+  {% endif %}
+
+</div>
