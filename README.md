@@ -1,12 +1,12 @@
 #Jekyll podcast template
 
-As the name implies, this is a Jekyll template for creating a podcast site. It is intended to make it as fast and easy as possible to get a podcast site up and running.
+As the name implies, this is a Jekyll template for creating a podcast site.
 
-Jekyll podcast template is based on the standard Jekyll template and lifted many ideas from [Kinoskopie.de](https://github.com/lnwdr/kinoskopie.de)—thanks for sharing—and many podcast feeds all over the Internet.
+It is based on the standard Jekyll template and lifted many ideas from [Kinoskopie.de](https://github.com/lnwdr/kinoskopie.de)—thanks for sharing!
 
 ##Features
 
-* Includes [MediaElement.js][me] out of the box for playing each podcast on its own page
+* Includes [MediaElement][me] out of the box for playing each podcast on its own page
 * iTunes-compatible RSS feed
 * Responsive design
 * One-stop shop for configuration
@@ -20,7 +20,8 @@ The included podcast has more instructions, so fire it up and listen.
 * Edit ```_config.yml``` with your own information
 * Change ```img/hero.jpg``` to your own hero image. (Though you have permission to use the included file if you want.)
 * Change ```img/generic-2000.png``` to your own podcast art and tell ```_config.yml``` the name. (iTunes requires this image at 2,000 pixels square)
-* Edit ```about.md``` to make it your own About page
+* Edit ```about.md``` to make it your own about page
+* (Optional) If you want to use Google Analytics, uncomment those lines in ```_includes/head.html``` and put in your own code
 
 ##Episode setup
 
