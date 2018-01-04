@@ -11,7 +11,7 @@
       <div class="wrapper">
       	<h1 style="margin-bottom: 0;">{{ page.title }}</h1>
       	<p>{{ page.date | date: "%-d %B %Y" }}</p>
-        <audio controls>
+        <audio preload="metadata" controls="" style="width:100%;">
 			  <source src="/podcasts/{{ page.media }}" type="audio/mpeg">
 			Sadness. Your browser does not support the audio element.
 			</audio>
@@ -28,7 +28,7 @@
 	<script>
 		$('audio').mediaelementplayer();
 	</script>
-  
-  
+
+
 </body>
 </html>
