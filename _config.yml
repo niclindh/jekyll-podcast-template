@@ -23,6 +23,7 @@ podcast:
     - category: "Technology"
 
 # Build settings
-markdown: redcarpet
-redcarpet:
-    extensions: [smart]
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
