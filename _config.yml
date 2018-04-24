@@ -1,15 +1,26 @@
-exclude: ['README.md']
+exclude: ['README.md', 'preview.sh', 'Gemfile', 'Gemfile.lock']
 
 # Used to generate the site
-title: "Generic Podcast"
-title_short: "Generic"
+title: "Example Pod"
+title_short: "Example Pod"
 email: "your-email@example.com"
 description: "Brief description of your podcast"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://example.com" # the base hostname & protocol for your site
 itunes_url: "https://itunes.apple.com/us/podcast/xxx"
+# itunes_id creates a smart banner on Safari in iOS prompting
+# visitors to subscribe
+# Uncomment next line to enable
+#itunes_id: xxx # After the last slash in itunes_url above without the letters "id"
 twitter_username: yourtwitter
 twitter_podcastname: yourpodcasttwitter
+
+# For the SEO tag
+seo:
+  name: "Example Pod"
+  type: "CreativeWork"
+  about: "Brief description of your podcast."
+  person: "Your Name"
 
 # Used to generate the iTunes-compatible RSS feed
 podcast:
@@ -20,10 +31,14 @@ podcast:
   image: /img/generic-2000.png # iTunes requires 2,000 pixel art
   keywords: "news"
   categories:
-    - category: "Technology"
+    - category: "Find categories on iTunes"
 
 # Build settings
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
