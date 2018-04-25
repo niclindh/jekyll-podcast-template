@@ -4,6 +4,13 @@ As the name implies, this is a Jekyll template for creating a podcast site.
 
 It is based on the standard Jekyll template and lifted many ideas from [Kinoskopie.de](https://github.com/lnwdr/kinoskopie.de)—thanks for sharing!
 
+## What’s new
+**Apr. 24, 2018:**
+* Add compatibility with new Google Search podcast functionality
+* Add optional Apple Splash Banner on iOS
+* Update Jekyll to 3.8.0
+* Add Bundler
+
 ## Features
 
 * Includes [MediaElement][me] out of the box for playing each podcast on its own page

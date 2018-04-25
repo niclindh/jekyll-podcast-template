@@ -8,10 +8,11 @@ description: "Brief description of your podcast"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://example.com" # the base hostname & protocol for your site
 itunes_url: "https://itunes.apple.com/us/podcast/xxx"
+
 # itunes_id creates a smart banner on Safari in iOS prompting
 # visitors to subscribe
 # Uncomment next line to enable
-#itunes_id: xxx # After the last slash in itunes_url above without the letters "id"
+#itunes_id: xxx # The ID is after the last slash in itunes_url above minus the letters "id"
 twitter_username: yourtwitter
 twitter_podcastname: yourpodcasttwitter
 
